@@ -11,7 +11,7 @@ def send_mail_func(self):
     users = get_user_model().objects.all()
 
     for user in users:
-        context = {'username': user.username}
+        context = {'username': user.username, 'firstname': user.first_name, 'lastname': user.last_name}
 
         mail_subject = "Cool Message For " + context['username']
         html_message = render_to_string('mail.html', context=context)

@@ -9,10 +9,8 @@
       {{ msg }}
     </div>
 </div>
-<div class="d-grid gap-2 col-4 mx-auto">
-    <button class="btn btn-warning btn-block px-5 mb-4" type="submit">
-        <a href="{% url 'mainpage' %}">home</a>
-    </button>
+<div class="d-grid gap-2 col-2 mx-auto m-2 p-2">
+    <a class="btn btn-warning btn-block" href="{% url 'mainpage' %}">home</a>
 </div>
 {% endfor %}
 {% endblock %}

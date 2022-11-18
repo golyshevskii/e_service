@@ -15,10 +15,8 @@
 <body>
     <div class="col-auto col-sm-auto col-md-auto col-lg-auto col-xl-auto col-xxl-auto">
         {% block content %}
-        <div class="d-grid gap-2 col-4 mx-auto">
-            <button class="btn btn-primary btn-block px-5 mb-4" type="submit">
-                <a href="{% url 'mailpage' %}">send emails</a>
-            </button>
+        <div class="d-grid gap-2 col-2 mx-auto m-2 p-2">
+                <a class="btn btn-primary btn-block" href="{% url 'mailpage' %}" style="text-decoration: none; color: white;">send emails</a>
         </div>
         {% endblock %}
     </div>
