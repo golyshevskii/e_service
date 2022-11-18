@@ -33,3 +33,5 @@
 9. create a new user
 
 10. send email
+
+### administration page: admin/admin

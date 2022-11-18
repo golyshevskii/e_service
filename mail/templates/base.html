@@ -15,17 +15,17 @@
 <body>
     <div class="col-auto col-sm-auto col-md-auto col-lg-auto col-xl-auto col-xxl-auto">
         {% block content %}
-        {% if msg %}
+        {% for msg in messages %}
         <div class="container-fluid p-0">
             <div class="d-flex justify-content-center alert alert-success" role="alert" >
               {{ msg }}
             </div>
         </div>
-        {% endif %}
-        <div class="d-grid gap-2 col-2 mx-auto m-2 p-2 mb-0">
+        {% endfor %}
+        <div class="d-grid gap-2 col-2 mx-auto m-4 p-2 mb-1">
                 <a class="btn btn-primary btn-block" href="{% url 'mailpage' %}" style="text-decoration: none; color: white;">send emails</a>
         </div>
-        <div class="d-grid gap-2 col-2 mx-auto m-2 p-2">
+        <div class="d-grid gap-2 col-2 mx-auto p-2">
             <a class="btn btn-warning btn-block" href="{% url 'signup' %}" style="text-decoration: none; color: black;">sign up</a>
         </div>
         {% endblock %}

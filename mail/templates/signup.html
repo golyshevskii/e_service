@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}sign up{% endblock %}
+{% block title %}Sign up{% endblock %}
 
 {% block content %}
 <div class="row d-flex justify-content-center align-items-center">
@@ -10,7 +10,7 @@
         <h3 class="d-flex justify-content-center mb-4">Sign Up</h3>
         <form method="post" action=".">
           {% csrf_token %}
-          <div class="form-outline mb-3">
+          <div class="form-outline mb-1">
             <input type="text" name="username" id="registerUsername" class="form-control" placeholder="username*" />
           </div>
 
@@ -18,7 +18,7 @@
             <input type="text" name="email" id="registerUsername" class="form-control" placeholder="email*" />
           </div>
 
-          <div class="form-outline mb-3">
+          <div class="form-outline mb-1">
             <input type="text" name="first_name" id="registerUsername" class="form-control" placeholder="first name" />
           </div>
 
@@ -54,9 +54,8 @@
           {% endfor %}
           {% endfor %}
           {% endif %}
-
-          <a href="{% url 'mainpage' %}" class="btn btn-block btn-warning px-1 mb-2">back</a>
           <button class="btn btn-primary btn-block mb-2">submit</button>
+          <a href="{% url 'mainpage' %}" class="btn btn-block btn-warning px-1 mb-2">back</a>
         </form>
       </div>
     </div>

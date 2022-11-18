@@ -7,15 +7,14 @@
 </head>
 
 <body>
-    <div class="container">
-        {% if firstname %}
-            <h4>Hello, {{ firstname }}!</h4>
-        {% else %}
-            <h4>Hello, {{ username }}!</h4>
-        {% endif %}
+    {% if firstname %}
+        <h4>Hello, {{ firstname }}!</h4>
+    {% else %}
+        <h4>Hello, {{ username }}!</h4>
+    {% endif %}
 
-        <p>Nice to see you in our website, we hope you enjoy it.</p>
-        <p>Best regards, E | Service team.</p>
-    </div>
+    <p>Nice to see you in our website, we hope you enjoy it.</p>
+    <p>Best regards, E | Service team.</p>
 </body>
+
 </html>
