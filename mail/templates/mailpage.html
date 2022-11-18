@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard | Sign In{% endblock %}
+
+{% block content %}
+{% for msg in messages %}
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-center alert alert-success" role="alert" >
+      {{ msg }}
+    </div>
+</div>
+<div class="d-grid gap-2 col-4 mx-auto">
+    <button class="btn btn-warning btn-block px-5 mb-4" type="submit">
+        <a href="{% url 'mainpage' %}">home</a>
+    </button>
+</div>
+{% endfor %}
+{% endblock %}
